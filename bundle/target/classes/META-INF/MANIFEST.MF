@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1457545986225
+Build-Jdk: 1.7.0_45
+Built-By: ctrubian
+Bundle-Description: Maven Multimodule project for AEM Twitter Integratio
+ n.
+Bundle-ManifestVersion: 2
+Bundle-Name: AEM Twitter Integration Bundle
+Bundle-SymbolicName: com.adobe.integration.aem-twitter-integration-bundl
+ e
+Bundle-Version: 0.1.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.adobe.integration;version="1.0.0"
+Tool: Bnd-1.50.0
