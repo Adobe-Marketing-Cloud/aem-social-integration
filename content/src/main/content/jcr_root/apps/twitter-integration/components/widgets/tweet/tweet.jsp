@@ -2,9 +2,10 @@
 %><%@include file="/libs/foundation/global.jsp"%><%
 %><%@page session="false"
         import="com.adobe.granite.ui.components.AttrBuilder,
-                org.apache.commons.lang.StringUtils" %><%
+                com.day.cq.i18n.I18n,
+                org.apache.commons.lang3.StringUtils" %><%
 %><%
-
+    I18n i18n = new I18n(slingRequest);
     AttrBuilder attrs = new AttrBuilder(request, xssAPI);
 
     String text = properties.get("text", String.class);
@@ -40,5 +41,5 @@
     }
 %>
 <cq:includeClientLib categories="aem.integrations.twitter" />
-<a <%= attrs.build() %>>Tweet</a>
+<a <%= attrs.build() %>><%= i18n.get("Tweet")%></a>
 

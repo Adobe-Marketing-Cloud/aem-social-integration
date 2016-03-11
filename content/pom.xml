@@ -37,6 +37,12 @@
             <version>3.3.2</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.i18n</artifactId>
+            <version>5.5.12</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <build>
         <resources>
