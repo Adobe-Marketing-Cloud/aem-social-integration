@@ -31,7 +31,7 @@
                     <recommend
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/multifield"
-                        fieldLabel="Recommend @#"
+                        fieldLabel="Recommend @"
                         name="./recommend"
                         renderReadOnly="{Boolean}false">
                         <field

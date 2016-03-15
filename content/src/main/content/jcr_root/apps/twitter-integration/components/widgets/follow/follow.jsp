@@ -2,8 +2,7 @@
 %><%@include file="/libs/foundation/global.jsp"%><%
 %><%@page session="false"
         import="com.adobe.granite.ui.components.AttrBuilder,
-        com.day.cq.i18n.I18n,
-        org.apache.commons.lang3.StringUtils" %><%
+        com.day.cq.i18n.I18n" %><%
 %><%
     I18n i18n = new I18n(slingRequest);
     AttrBuilder attrs = new AttrBuilder(request, xssAPI);
