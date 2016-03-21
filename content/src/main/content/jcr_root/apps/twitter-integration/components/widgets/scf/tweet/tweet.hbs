@@ -1,0 +1,12 @@
+{{includeClientLib categories="aem.integrations.twitter"}}
+<a href="https://twitter.com/share"
+   class="twitter-share-button"
+   {{#if text}}data-text="{{text}}"{{/if}}
+    {{#if shareUrl}}data-url="{{shareUrl}}"{{/if}}
+    {{#if via}}data-via="{{via}}"{{/if}}
+    {{#if recommend}}data-recommend="{{recommend}}"{{/if}}
+    {{#if hashTags}}data-hashtags="{{hashTags}}"{{/if}}
+    {{#if largeButton}}data-size="large"{{/if}}
+    {{#if tailorTwitter}}data-dnt="true"{{/if}}>
+    {{i18n "Tweet"}}
+</a>

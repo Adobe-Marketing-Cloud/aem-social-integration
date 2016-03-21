@@ -1,0 +1,8 @@
+{{includeClientLib categories="aem.integrations.twitter"}}
+<a href="https://twitter.com/"
+   class="twitter-timeline"
+   {{#if widget}}data-widget-id="{{widget}}"{{/if}}
+   {{#if limit}}data-tweet-limit="{{limit}}"{{/if}}
+   {{#if tailorTwitter}}data-dnt="true"{{/if}}>
+    {{i18n "Twitter Timeline"}}
+</a>

@@ -1,0 +1,9 @@
+{{includeClientLib categories="aem.integrations.twitter"}}
+<a href="https://twitter.com/{{user}}"
+   class="twitter-follow-button"
+   data-show-count="{{showCount}}"
+   {{#unless showUser}}data-show-screen-name="false"{{/unless}}
+    {{#if largeButton}}data-size="large"{{/if}}
+    {{#if tailorTwitter}}data-dnt="true"{{/if}}>
+    {{i18n "Follow @"}}{{user}}
+</a>

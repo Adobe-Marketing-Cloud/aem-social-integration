@@ -1,0 +1,8 @@
+{{includeClientLib categories="aem.integrations.twitter"}}
+<a href="https://twitter.com/intent/tweet?screen_name={{user}}{{#if query}}&{{query}}{{/if}}"
+   class="twitter-mention-button"
+   {{#if recommend}}data-related="{recommend}"{{/if}}
+    {{#if largeButton}}data-size="large"{{/if}}
+    {{#if tailorTwitter}}data-dnt="true"{{/if}}>
+    {{i18n "Tweet @"}}{{user}}
+</a>

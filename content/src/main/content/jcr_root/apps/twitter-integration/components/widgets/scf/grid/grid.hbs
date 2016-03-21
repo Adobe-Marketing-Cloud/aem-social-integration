@@ -1,0 +1,8 @@
+{{includeClientLib categories="aem.integrations.twitter"}}
+<a {{#if collection}}href="https://twitter.com/{{user}}/timelines/{{collection}}"{{/if}}
+   {{#unless collection}}href="https://twitter.com/{{user}}"{{/unless}}
+   class="twitter-grid"
+   {{#if limit}}data-limit={{limit}}{{/if}}
+    {{#if tailorTwitter}}data-dnt="true"{{/if}}>
+    {{i18n "Twitter grid"}}
+</a>
