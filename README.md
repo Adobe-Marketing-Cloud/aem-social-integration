@@ -17,3 +17,9 @@ tooling.  The collection ID is specified in the component.
 All components are available as JSP, SCF, and Sightly implementations.
 
 Feel free to fork and modify as desired, or contribute back using pull requests.
+
+To install, clone the repo and run:
+
+mvn clean install
+
+Then deploy the package created in /content/target to AEM.  Components are installed to /apps/twitter-integration.
