@@ -1,0 +1,9 @@
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+    <js data-sly-call="${clientLib.js @ categories='aem.integrations.twitter'}" data-sly-unwrap/>
+</sly>
+
+<a href="https://twitter.com/intent/tweet?screen_name=${properties.user ? properties.user : 'ChangeMe'}&text=${properties.text}"
+   class="twitter-mention-button"
+   data-related="${properties.recommend @ join=','}"
+   data-size="${properties.largeButton ? 'large' : ''}"
+   data-dnt="${properties.tailorTwitter ? 'true' : ''}">Tweet to @${properties.user ? properties.user : 'ChangeMe'}</a>

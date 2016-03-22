@@ -1,0 +1,9 @@
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+    <js data-sly-call="${clientLib.js @ categories='aem.integrations.twitter'}" data-sly-unwrap/>
+</sly>
+
+<a href="https://twitter.com/${properties.user ? properties.user : 'ChangeMe'}/timelines/${properties.collection}"
+   class="twitter-grid"
+   data-widget-id="${properties.collection}"
+   data-limit="${properties.limit != '0' ? properties.limit : ''}"
+   data-dnt="${properties.tailorTwitter ? 'true' : ''}">Twitter grid</a>

@@ -1,0 +1,10 @@
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+    <js data-sly-call="${clientLib.js @ categories='aem.integrations.twitter'}" data-sly-unwrap/>
+</sly>
+
+<a href="https://twitter.com/${properties.user ? properties.user : 'ChangeMe'}"
+   class="twitter-follow-button"
+   data-show-count="${properties.showCount ? properties.showCount : 'false'}"
+   data-show-screen-name="${properties.showScreen == 'false' ? 'false' : ''}"
+   data-size="${properties.largeButton ? 'large' : ''}"
+   data-dnt="${properties.tailorTwitter ? 'true' : ''}">Follow @${properties.user ? properties.user : 'ChangeMe'}</a>
