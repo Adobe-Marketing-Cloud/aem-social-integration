@@ -6,7 +6,7 @@
     <!-- ====================================================================== -->
 
     <groupId>com.adobe.integration</groupId>
-    <artifactId>aem-twitter-integration</artifactId>
+    <artifactId>aem-social-integration</artifactId>
     <version>0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 

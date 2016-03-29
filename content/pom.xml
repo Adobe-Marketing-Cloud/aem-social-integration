@@ -7,7 +7,7 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>com.adobe.integration</groupId>
-        <artifactId>aem-twitter-integration</artifactId>
+        <artifactId>aem-social-integration</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
 
@@ -15,14 +15,14 @@
     <!-- P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <artifactId>aem-twitter-integration-content</artifactId>
+    <artifactId>aem-social-integration-content</artifactId>
     <packaging>content-package</packaging>
-    <name>AEM Twitter Integration Package</name>
+    <name>AEM Social Integration Package</name>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>aem-twitter-integration-bundle</artifactId>
+            <artifactId>aem-social-integration-bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -81,8 +81,8 @@
                     <embeddeds>
                         <embedded>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>aem-twitter-integration-bundle</artifactId>
-                            <target>/apps/twitter-integration/install</target>
+                            <artifactId>aem-social-integration-bundle</artifactId>
+                            <target>/apps/social-integration/install</target>
                         </embedded>
                     </embeddeds>
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="AEM Twitter Integration Pacakge"
+    jcr:description="AEM Social Integration Pacakge"
     jcr:primaryType="vlt:PackageDefinition"
     sling:resourceType="cq/packaging/components/pack/definition"
     buildCount="1"
     cqVersion="6.1"
     group="Adobe Systems"
-    name="aem-twitter-integration-content"
-    path="/etc/packages/Adobe Systems/aem-twitter-integration-content-0.1-SNAPSHOT"
+    name="aem-social-integration-content"
+    path="/etc/packages/Adobe Systems/aem-social-integration-content-0.1-SNAPSHOT"
     version="0.1-SNAPSHOT">
     <filter jcr:primaryType="nt:unstructured">
         <f0
             jcr:primaryType="nt:unstructured"
             mode="replace"
-            root="/apps/twitter-integration"
+            root="/apps/social-integration"
             rules="[]"/>
     </filter>
 </jcr:root>

@@ -7,7 +7,7 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>com.adobe.integration</groupId>
-        <artifactId>aem-twitter-integration</artifactId>
+        <artifactId>aem-social-integration</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
 
@@ -15,9 +15,9 @@
     <!-- P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <artifactId>aem-twitter-integration-bundle</artifactId>
+    <artifactId>aem-social-integration-bundle</artifactId>
     <packaging>bundle</packaging>
-    <name>AEM Twitter Integration Bundle</name>
+    <name>AEM Social Integration Bundle</name>
 
     <dependencies>
         <dependency>
@@ -119,7 +119,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>com.adobe.integration.aem-twitter-integration-bundle</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>com.adobe.integration.aem-social-integration-bundle</Bundle-SymbolicName>
                     </instructions>
                 </configuration>
             </plugin>
@@ -127,7 +127,7 @@
                 <groupId>org.apache.sling</groupId>
                 <artifactId>maven-sling-plugin</artifactId>
                 <configuration>
-                    <slingUrl>http://${crx.host}:${crx.port}/apps/twitter-integration/install</slingUrl>
+                    <slingUrl>http://${crx.host}:${crx.port}/apps/social-integration/install</slingUrl>
                     <usePut>true</usePut>
                 </configuration>
             </plugin>
