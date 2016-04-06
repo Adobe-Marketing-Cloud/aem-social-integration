@@ -1,0 +1,23 @@
+<sly data-sly-test="${properties.url}" data-sly-unwrap>
+    <div id="fb-root"></div>
+    <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+        <js data-sly-call="${clientLib.js @ categories='aem.integrations.facebook'}" data-sly-unwrap/>
+    </sly>
+
+    <div
+        class="fb-follow"
+        data-href="${properties.url}"
+        data-layout="${properties.layout}"
+        data-colorscheme="${properties.color}"
+        data-kid-directed-site="${properties.kid}"
+        data-show-faces="${properties.faces}">
+    </div>
+</sly>
+
+<sly data-sly-test.author="${!properties.url}" data-sly-unwrap>
+    <div class="cq-placeholder" data-emptytext="Facebook Follow - Please set the URL of the profile to follow."></div>
+</sly>
+
+
+
+

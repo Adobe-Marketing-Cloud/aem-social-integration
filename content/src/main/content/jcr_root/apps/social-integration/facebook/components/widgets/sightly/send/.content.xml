@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Privately send the current page or defined URL to one or more friends."
+    jcr:primaryType="cq:Component"
+    jcr:title="Facebook Send"
+    allowedParents="[*/parsys]"
+    componentGroup="Facebook Integration - Sightly"/>

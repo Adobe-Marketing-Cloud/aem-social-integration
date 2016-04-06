@@ -1,0 +1,21 @@
+<sly data-sly-test="${properties.url}" data-sly-unwrap>
+    <div id="fb-root"></div>
+    <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+        <js data-sly-call="${clientLib.js @ categories='aem.integrations.facebook'}" data-sly-unwrap/>
+    </sly>
+
+    <div
+        class="fb-send"
+        data-href="${properties.url}"
+        data-colorscheme="${properties.color}"
+        data-kid-directed-site="${properties.kid}">
+    </div>
+</sly>
+
+<sly data-sly-test="${!properties.url}" data-sly-unwrap>
+    <div class="cq-placeholder" data-emptytext="Facebook Send - Please set an URL"></div>
+</sly>
+
+
+
+

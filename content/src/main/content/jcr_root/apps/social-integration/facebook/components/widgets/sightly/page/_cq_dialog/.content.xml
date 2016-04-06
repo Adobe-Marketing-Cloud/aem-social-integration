@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Embedded Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <url
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="URL of the page to be embedded."
+                        fieldLabel="URL"
+                        name="./url"/>
+                    <tabs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        name="./tabs"
+                        fieldLabel="Tabs"
+                        fieldDescription="Tabs to render."
+                        multiple="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <timeline
+                                jcr:primaryType="nt:unstructured"
+                                text="Timeline"
+                                value="timeline"/>
+                            <events
+                                jcr:primaryType="nt:unstructured"
+                                text="Events"
+                                value="events"/>
+                            <messages
+                                jcr:primaryType="nt:unstructured"
+                                text="Messages"
+                                value="messages"/>
+                        </items>
+                    </tabs>
+                    <width
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        fieldDescription="Width of the embedded page in pixels between 180 and 500.  340 by default."
+                        fieldLabel="Width"
+                        min="180"
+                        max="500"
+                        defaultValue="340"
+                        step="10"
+                        name="./width"/>
+                    <height
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        fieldDescription="Height of the embedded page in pixel.  Minimum is 70, and default is 500."
+                        fieldLabel="Height"
+                        min="70"
+                        defaultValue="500"
+                        step="10"
+                        name="./height"/>
+                    <hide_cover
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./cover"
+                        text="Hide cover"
+                        fieldDescription="Hide cover photo in header."
+                        value="true"/>
+                    <facepile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./facepile"
+                        text="Show Facepile"
+                        fieldDescription="Show profile photos when friends like this."
+                        value="true"
+                        uncheckedValue="false"
+                        defaultChecked="{Boolean}true"/>
+                    <small_header
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./smallheader"
+                        text="Use small header"
+                        value="true"/>
+                    <adapt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./adapt"
+                        text="Adapt container width"
+                        fieldDescription="Try to fit inside the container width."
+                        value="true"
+                        uncheckedValue="false"
+                        defaultChecked="{Boolean}true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

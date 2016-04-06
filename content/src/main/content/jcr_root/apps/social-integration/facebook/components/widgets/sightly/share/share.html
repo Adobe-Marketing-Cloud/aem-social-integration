@@ -1,0 +1,11 @@
+<div id="fb-root"></div>
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+    <js data-sly-call="${clientLib.js @ categories='aem.integrations.facebook'}" data-sly-unwrap/>
+</sly>
+
+<div
+    class="fb-share-button"
+    data-href="${properties.url}"
+    data-layout="${properties.layout}"></div>
+
+

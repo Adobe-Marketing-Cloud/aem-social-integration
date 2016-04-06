@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Embedded Video"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <url
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="URL of the video to be embedded."
+                        fieldLabel="URL"
+                        name="./url"/>
+                    <fullscreen
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        text="Allow fullscreen."
+                        value="true"
+                        name="./fullscreen"/>
+                    <autoplay
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        text="Autoplay"
+                        value="true"
+                        name="./autoplay"/>
+                    <width
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        fieldDescription="Width of the embedded video in pixels.  Minimum is 220px.  Default is auto."
+                        fieldLabel="Width"
+                        min="220"
+                        step="10"
+                        name="./width"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

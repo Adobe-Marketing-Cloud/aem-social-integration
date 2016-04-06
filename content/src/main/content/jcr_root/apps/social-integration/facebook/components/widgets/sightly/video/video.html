@@ -1,0 +1,20 @@
+<sly data-sly-test="${properties.url}" data-sly-unwrap>
+    <div id="fb-root"></div>
+    <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+        <js data-sly-call="${clientLib.js @ categories='aem.integrations.facebook'}" data-sly-unwrap/>
+    </sly>
+
+    <div
+        class="fb-video"
+        data-href="${properties.url}"
+        data-width="${properties.width}"
+        data-autoplay="${properties.autoplay ? properties.autoplay : 'false'}"
+        data-allowfullscreen="${properties.fullscreen}">
+    </div>
+</sly>
+
+<sly data-sly-test="${!properties.url}" data-sly-unwrap>
+    <div class="cq-placeholder" data-emptytext="Facebook Embedded Video - Please set the URL"></div>
+</sly>
+
+

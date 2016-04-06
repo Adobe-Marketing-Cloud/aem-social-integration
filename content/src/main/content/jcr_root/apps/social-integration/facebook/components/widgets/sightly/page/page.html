@@ -1,0 +1,24 @@
+<sly data-sly-test="${properties.url}" data-sly-unwrap>
+    <div id="fb-root"></div>
+    <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+        <js data-sly-call="${clientLib.js @ categories='aem.integrations.facebook'}" data-sly-unwrap/>
+    </sly>
+
+    <div
+        class="fb-page"
+        data-href="${properties.url}"
+        data-tabs="${properties.tabs @ join=','}"
+        data-width="${properties.width}"
+        data-height="${properties.height}"
+        data-hide-cover="${properties.cover}"
+        data-show-facepile="${properties.facepile}"
+        data-small-header="${properties.smallheader}"
+        data-adapt-container-width="${properties.adapt}">
+    </div>
+</sly>
+
+<sly data-sly-test.author="${!properties.url}" data-sly-unwrap>
+    <div class="cq-placeholder" data-emptytext="Facebook Page - Set the URL for the page to embed."></div>
+</sly>
+
+

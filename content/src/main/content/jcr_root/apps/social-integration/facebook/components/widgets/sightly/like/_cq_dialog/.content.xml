@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Like"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <url
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="URL to be liked.  Leave blank to use current page."
+                        fieldLabel="URL"
+                        name="./url"/>
+                    <action
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        fieldLabel="Action"
+                        fieldDescription="The verb to display on the button."
+                        name="./action">
+                        <items jcr:primaryType="nt:unstructured">
+                            <like
+                                jcr:primaryType="nt:unstructured"
+                                text="Like"
+                                value="like"/>
+                            <recommend
+                                jcr:primaryType="nt:unstructured"
+                                text="Recommend"
+                                value="recommend"/>
+                        </items>
+                    </action>
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        fieldLabel="Layout"
+                        fieldDescription="The layout to be used for the plugin."
+                        name="./layout">
+                        <items jcr:primaryType="nt:unstructured">
+                            <standard
+                                jcr:primaryType="nt:unstructured"
+                                text="Standard"
+                                value="standard"/>
+                            <button_count
+                                jcr:primaryType="nt:unstructured"
+                                text="Button Count"
+                                value="button_count"/>
+                            <button
+                                jcr:primaryType="nt:unstructured"
+                                text="Button"
+                                value="button"/>
+                            <box_count
+                                jcr:primaryType="nt:unstructured"
+                                text="Box Count"
+                                value="box_count"/>
+                        </items>
+                    </layout>
+                    <color_scheme
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        fieldLabel="Color Scheme"
+                        fieldDescription="The color scheme used by the plugin."
+                        name="./color">
+                        <items jcr:primaryType="nt:unstructured">
+                            <light
+                                jcr:primaryType="nt:unstructured"
+                                text="Light"
+                                value="light"/>
+                            <dark
+                                jcr:primaryType="nt:unstructured"
+                                text="Dark"
+                                value="dark"/>
+                        </items>
+                    </color_scheme>
+                    <kid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./kid"
+                        text="Kid directed site"
+                        fieldDescription="If the your site is directed to children under 13 you must enable this."
+                        value="true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,18 @@
+<sly data-sly-test="${properties.url}" data-sly-unwrap>
+    <div id="fb-root"></div>
+    <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+        <js data-sly-call="${clientLib.js @ categories='aem.integrations.facebook'}" data-sly-unwrap/>
+    </sly>
+
+    <div
+        class="fb-post"
+        data-href="${properties.url}"
+        data-width="${properties.width ? properties.width : 500}">
+    </div>
+</sly>
+
+<sly data-sly-test="${!properties.url}" data-sly-unwrap>
+    <div class="cq-placeholder" data-emptytext="Facebook Embedded Post - Please set the URL"></div>
+</sly>
+
+
